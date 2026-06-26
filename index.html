@@ -1,116 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Emmanuel Onyekachi | Frontend Developer</title>
-  <meta name="description" content="Emmanuel Onyekachi is a frontend developer based in Lagos, Nigeria, building fast, refined, and performant web experiences.">
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Custom Styles -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Emmanuel Onyekachi — Frontend Developer building fast, refined, and performant web experiences." />
+  <title>Emmanuel Onyekachi — Frontend Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    
+  </style>
 </head>
+
 <body>
 
   <!-- =============================================
-     HEADER / NAVIGATION
+       HEADER / NAVIGATION
   ============================================= -->
-  <header class="navbar" id="navbar">
+  <header class="site-header" id="site-header">
     <div class="nav-container">
-      <div class="logo">
-        <a href="#">
+
+      <!-- Logo -->
+      <div class="nav-logo">
+        <a href="#hero" aria-label="Emmanuel Onyekachi — Home">
           <span class="curly">{</span>
-          <span class="e-logo">E</span>
+          <span class="e-letter">E</span>
           <span class="curly">}</span>
         </a>
       </div>
 
-      <nav class="nav-menu" id="navMenu">
-        <ul class="nav-links">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#work" class="nav-link">Work</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#beliefs" class="nav-link">Beliefs</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
+      <!-- Desktop navigation links -->
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about"    class="nav-link">About</a>
+        <a href="#skills"   class="nav-link">Skills</a>
+        <a href="#work"     class="nav-link">Work</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact"  class="nav-link">Contact</a>
       </nav>
 
-      <div class="nav-actions">
-        <a href="#contact" class="cta-btn">Work With Me</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu" aria-expanded="false">
+      <!-- Desktop CTA + mobile hamburger -->
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="#contact" class="nav-cta" aria-label="Work with me">Work With Me</a>
+
+        <!-- Hamburger — visible only on mobile -->
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
       </div>
+
     </div>
+
+    <!-- Mobile dropdown menu -->
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+      <a href="#about"    class="mobile-link">About</a>
+      <a href="#skills"   class="mobile-link">Skills</a>
+      <a href="#work"     class="mobile-link">Work</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#contact"  class="mobile-link">Contact</a>
+    </nav>
   </header>
 
+
   <main>
+
     <!-- =============================================
-       HERO SECTION
+         HERO SECTION
     ============================================= -->
-    <section class="hero" id="hero">
+    <section id="hero">
       <div class="container hero-container">
+
+        <!-- Left: Text content -->
         <div class="hero-left">
-          <div class="status-pill">
-            <span class="status-dot"></span>
-            <span class="status-text">Available for freelance</span>
+
+          <!-- Availability status pill -->
+          <div class="status-pill" role="status" aria-label="Currently available for freelance work">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Available for freelance Projects</span>
           </div>
 
-          <p class="hero-intro">
-            Web Developer building refined digital experiences
-          </p>
+          <!-- Intro label -->
+          <p class="hero-intro">Front-end Web Developer</p>
 
+          <!-- Name heading -->
           <h1 class="hero-name">
-            <span class="name-first">Emmanuel</span>
-            <span class="name-last">Onyekachi</span>
+            <span class="first-name">Emmanuel</span>
+            <span class="last-name">Onyekachi</span>
           </h1>
 
+          <!-- Short bio -->
           <p class="hero-description">
-            I design and build modern, fully responsive, high-performance web experiences — engineered with clean architecture and precise attention to detail.
+            I design and build modern, fully responsive, high-performance web experiences —
+            engineered with clean architecture, refined motion, and precise attention to detail.
           </p>
 
+          <!-- CTA buttons -->
           <div class="hero-buttons">
-            <a href="#work" class="btn-primary">View Selected Work</a>
+            <a href="#work"    class="btn-primary">View Selected Work</a>
             <a href="#contact" class="btn-outline">Start a Project</a>
+          </div>
+
+        </div>
+
+        <!-- Right: Profile photo -->
+        <div class="hero-right">
+          <div class="hero-image-wrapper">
+            <img
+              src="images/IMG_0659.jpg"
+              alt="Emmanuel Onyekachi — Frontend Developer"
+              width="380"
+              height="470"
+              loading="eager"
+            />
           </div>
         </div>
 
-        <div class="hero-right">
-          <div class="image-wrapper">
-            <!-- Ensure your image matches this directory path or update accordingly -->
-            <img src="images/IMG_0659.jpg" alt="Emmanuel Onyekachi">
-          </div>
-        </div>
       </div>
     </section>
 
+
     <!-- =============================================
-       ABOUT SECTION
+         ABOUT SECTION
     ============================================= -->
-    <section class="section about-section" id="about">
+    <section id="about" class="section">
       <div class="container">
+
+        <!-- Section heading -->
         <div class="section-label-wrap">
           <span class="section-eyebrow">01. About</span>
           <h2 class="section-title">Who I am</h2>
         </div>
 
         <div class="about-body">
+
+          <!-- Bio paragraph -->
           <p class="about-text">
-            I'm a self-taught frontend web developer based in Lagos, Nigeria — building fast, refined, and performant web experiences engineered with precision. My background in engineering shapes my systems-thinking approach, now applied to clean architecture, intuitive layouts, and strict UI craft. I focus on turning complex designs into responsive, highly interactive, and production-ready applications.
-          </p>
-          <p class="about-text">
-            My journey into web development started from curiosity in 2023. What I enjoy most is constructing clean interfaces that are simple, intuitive, and highly functional. I pay strong attention to how users interact with a website, ensuring everything feels smooth and accessible.
+            I'm a self-taught frontend web developer based in Lagos, Nigeria — building fast,
+            refined, and performant web experiences engineered with precision. My background
+            in engineering shapes my systems-thinking approach, now applied to clean architecture,
+            intuitive motion, and UI craft. I focus on turning complex designs into responsive,
+            highly interactive, production-ready applications.
           </p>
 
-          <div class="stack-badges">
+          <!-- Tech stack badges -->
+          <div class="stack-badges" aria-label="Technology stack">
             <span class="badge">HTML</span>
             <span class="badge">CSS</span>
             <span class="badge">JavaScript</span>
@@ -122,39 +170,46 @@
             <span class="badge">Vite</span>
             <span class="badge">Next.js</span>
           </div>
+
         </div>
+
       </div>
     </section>
 
+
     <!-- =============================================
-       SKILLS SECTION
+         SKILLS SECTION
     ============================================= -->
-    <section class="section skills-section" id="skills">
+    <section id="skills" class="section">
       <div class="container">
+
+        <!-- Section heading -->
         <div class="section-label-wrap">
           <span class="section-eyebrow">02. Skills</span>
           <h2 class="section-title">What I work with</h2>
         </div>
 
         <div class="skills-grid">
-          <!-- Production Stack Column -->
+
+          <!-- Column 1: Production Stack -->
           <div class="skill-column">
             <div class="skill-column-header">
-              <span class="skill-tag-label production-tag">Production Stack</span>
+              <span class="skill-tag-label" style="color: #4f9cff;">Production Stack</span>
               <h3>What I build with</h3>
             </div>
-            <ul class="skill-list">
+
+            <ul class="skill-list" aria-label="Production Stack skills">
               <li class="skill-item">
                 <span class="skill-name">HTML5</span>
                 <span class="skill-note">Semantic, accessible markup</span>
               </li>
               <li class="skill-item">
                 <span class="skill-name">CSS3 / Sass</span>
-                <span class="skill-note">Custom properties, layouts</span>
+                <span class="skill-note">Custom properties, animations</span>
               </li>
               <li class="skill-item">
                 <span class="skill-name">JavaScript (ES6+)</span>
-                <span class="skill-note">Vanilla & modern patterns</span>
+                <span class="skill-note">Vanilla &amp; modern patterns</span>
               </li>
               <li class="skill-item">
                 <span class="skill-name">React</span>
@@ -166,30 +221,35 @@
               </li>
               <li class="skill-item">
                 <span class="skill-name">Framer Motion</span>
-                <span class="skill-note">Scroll & gesture animation</span>
+                <span class="skill-note">Scroll &amp; gesture animation</span>
               </li>
               <li class="skill-item">
                 <span class="skill-name">GSAP</span>
-                <span class="skill-note">Timeline & ScrollTrigger</span>
+                <span class="skill-note">Timeline &amp; ScrollTrigger</span>
               </li>
               <li class="skill-item">
-                <span class="skill-name">Git & GitHub</span>
-                <span class="skill-note">Version control & collaboration</span>
+                <span class="skill-name">Git &amp; GitHub</span>
+                <span class="skill-note">Version control &amp; collaboration</span>
               </li>
-            </ul>
-          </div>
-
-          <!-- Next Stack Column -->
-          <div class="skill-column">
-            <div class="skill-column-header">
-              <span class="skill-tag-label learning-tag">Next Stack</span>
-              <h3>Currently learning</h3>
-            </div>
-            <ul class="skill-list">
+              <li class="skill-item">
+                <span class="skill-name">Vite</span>
+                <span class="skill-note">Build tooling</span>
+              </li>
               <li class="skill-item">
                 <span class="skill-name">TypeScript</span>
                 <span class="skill-note">Type-safe JavaScript</span>
               </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Next Stack -->
+          <div class="skill-column">
+            <div class="skill-column-header">
+              <span class="skill-tag-label" style="color: #f4c04e;">Next Stack</span>
+              <h3>Currently learning</h3>
+            </div>
+            <ul class="skill-list" aria-label="Currently learning skills">
+              
               <li class="skill-item">
                 <span class="skill-name">Next.js</span>
                 <span class="skill-note">SSR, SSG, App Router</span>
@@ -200,7 +260,7 @@
               </li>
               <li class="skill-item">
                 <span class="skill-name">REST APIs</span>
-                <span class="skill-note">Fetching & integrating data</span>
+                <span class="skill-note">Fetching &amp; integrating data</span>
               </li>
               <li class="skill-item">
                 <span class="skill-name">Supabase</span>
@@ -209,13 +269,13 @@
             </ul>
           </div>
 
-          <!-- Working Toward Column -->
+          <!-- Column 3: Full Stack (Working Toward) -->
           <div class="skill-column">
             <div class="skill-column-header">
-              <span class="skill-tag-label working-tag">Full Stack</span>
+              <span class="skill-tag-label" style="color: #b07cff;">Full Stack</span>
               <h3>Working toward</h3>
             </div>
-            <ul class="skill-list">
+            <ul class="skill-list" aria-label="Working toward skills">
               <li class="skill-item">
                 <span class="skill-name">PostgreSQL</span>
                 <span class="skill-note">Relational database</span>
@@ -234,202 +294,289 @@
               </li>
             </ul>
           </div>
+
         </div>
       </div>
     </section>
 
+
     <!-- =============================================
-       SELECTED WORK / PROJECTS SECTION
-    ============================================= */ -->
-    <section class="section projects-section" id="work">
+         PROJECTS / WORK SECTION
+    ============================================= -->
+    <section id="work" class="section">
       <div class="container">
+
+        <!-- Section heading -->
         <div class="section-label-wrap">
           <span class="section-eyebrow">03. Work</span>
-          <h2 className="section-title">Selected Work</h2>
+          <h2 class="section-title">Selected Work</h2>
         </div>
 
         <div class="projects-grid">
-          
-          <!-- Project Card 1: PrimeNest Realty -->
-          <article class="p-card">
-            <!-- Decorative Folder Tab Header -->
-            <div class="p-card-tab-header tab-blue">
-              <span class="p-tab-num">01</span>
-              <span class="p-tab-divider"></span>
-              <span class="p-tab-title">PrimeNest Realty</span>
-            </div>
-            <div class="p-card-body">
-              <div class="p-card-content">
-                <div class="p-card-meta">
-                  <span class="p-card-tag-badge">Client Project</span>
+
+          <!-- Project 01: PrimeNest Realty -->
+          <article class="project-card" aria-label="PrimeNest Realty project">
+
+            <div class="project-card-inner">
+              <!-- Text content -->
+              <div class="project-card-content">
+                <div class="project-card-meta">
+                  <span class="project-card-num">01</span>
+                  <span class="project-card-category">Client Project</span>
                 </div>
-                <h3 class="p-card-name">PrimeNest Realty</h3>
-                <p class="p-card-desc">
-                  A luxury real estate platform with dynamic property listings, mortgage calculator, parallax effects, and a fully responsive multi-page layout built for high-end property marketing.
+
+                <h3 class="project-card-title">PrimeNest Realty</h3>
+
+                <p class="project-card-desc">
+                  A luxury real estate platform with dynamic property listings, mortgage calculator,
+                  parallax effects, and a fully responsive multi-page layout built for high-end property marketing.
                 </p>
-                <div class="p-card-tech">
-                  <span class="tech-tag">HTML</span>
-                  <span class="tech-tag">CSS</span>
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">ScrollReveal</span>
+
+                <div class="project-card-tags" aria-label="Technologies used">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">ScrollReveal</span>
                 </div>
-                <div class="p-card-actions">
-                  <a href="https://emmanuelonyeka.github.io/real-estate/" target="_blank" rel="noopener noreferrer" class="btn-project-action primary">
-                    View Project
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+
+                <div class="project-card-actions">
+                  <a
+                    href="https://emmanuelonyeka.github.io/real-estate/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-project-live"
+                    aria-label="View PrimeNest Realty live site"
+                  >
+                    <!-- External link icon -->
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                       <polyline points="15 3 21 3 21 9"/>
                       <line x1="10" y1="14" x2="21" y2="3"/>
                     </svg>
+                    View Project
                   </a>
-                  <a href="https://github.com/emmanuelonyeka/real-estate" target="_blank" rel="noopener noreferrer" class="btn-project-action secondary">
-                    Source Code
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  <a
+                    href="https://github.com/emmanuelonyeka/real-estate"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-project-source"
+                    aria-label="View PrimeNest Realty source code on GitHub"
+                  >
+                    <!-- GitHub icon -->
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 10.94c.58.1.79-.25.79-.56v-2.17c-3.26.71-3.95-1.57-3.95-1.57-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.77 2.74 1.26 3.4.97.1-.75.41-1.26.74-1.55-2.6-.3-5.34-1.3-5.34-5.8 0-1.28.46-2.32 1.2-3.14-.12-.3-.52-1.5.12-3.12 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.5 3.2-1.2 3.2-1.2.64 1.62.24 2.82.12 3.12.74.82 1.2 1.86 1.2 3.14 0 4.52-2.75 5.5-5.37 5.8.42.36.8 1.08.8 2.17v3.22c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
                     </svg>
+                    Source Code
                   </a>
                 </div>
               </div>
-              <div class="p-card-preview">
-                <img src="images/primenest.png" alt="PrimeNest Realty preview" loading="lazy">
+
+              <!-- Project screenshot -->
+              <div class="project-card-image">
+                <img
+                  src="images/primenest.png"
+                  alt="PrimeNest Realty website screenshot"
+                  loading="lazy"
+                />
               </div>
             </div>
           </article>
 
-          <!-- Project Card 2: Lumière Fine Dining -->
-          <article class="p-card">
-            <!-- Decorative Folder Tab Header -->
-            <div class="p-card-tab-header tab-gold">
-              <span class="p-tab-num">02</span>
-              <span class="p-tab-divider"></span>
-              <span class="p-tab-title">Lumière Fine Dining</span>
-            </div>
-            <div class="p-card-body">
-              <div class="p-card-content">
-                <div class="p-card-meta">
-                  <span class="p-card-tag-badge">Client Project</span>
+
+          <!-- Project 02: Lumière Fine Dining -->
+          <article class="project-card" aria-label="Lumière Fine Dining project">
+
+            <div class="project-card-inner">
+              <div class="project-card-content">
+                <div class="project-card-meta">
+                  <span class="project-card-num">02</span>
+                  <span class="project-card-category">Client Project</span>
+                  <span class="project-card-category in-progress">
+                    <span class="progress-dot"></span>
+                    in Progress
+                  </span>
                 </div>
-                <h3 class="p-card-name">Lumière Fine Dining</h3>
-                <p class="p-card-desc">
-                  A multi-page luxury restaurant website with a complete reservation system, email confirmation flows, modify and cancel booking support — all powered by EmailJS and a refined black/gold design system.
+
+                <h3 class="project-card-title">Lumière Fine Dining</h3>
+
+                <p class="project-card-desc">
+                  A multi-page luxury restaurant website with a complete reservation system, email confirmation
+                  flows, modify and cancel booking support — all powered by EmailJS and a refined black/gold design system.
                 </p>
-                <div class="p-card-tech">
-                  <span class="tech-tag">HTML</span>
-                  <span class="tech-tag">CSS</span>
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">EmailJS</span>
+
+                <div class="project-card-tags" aria-label="Technologies used">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">EmailJS</span>
                 </div>
-                <div class="p-card-actions">
-                  <a href="https://emmanuelonyeka.github.io/lumiere-restaurant/" target="_blank" rel="noopener noreferrer" class="btn-project-action primary">
-                    View Project
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+
+                <div class="project-card-actions">
+                  <a
+                    href="https://emmanuelonyeka.github.io/lumiere-restaurant/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-project-live"
+                    aria-label="View Lumière Fine Dining live site"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                       <polyline points="15 3 21 3 21 9"/>
                       <line x1="10" y1="14" x2="21" y2="3"/>
                     </svg>
+                    View Project
                   </a>
-                  <a href="https://github.com/emmanuelonyeka/lumiere-restaurant" target="_blank" rel="noopener noreferrer" class="btn-project-action secondary">
-                    Source Code
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  <a
+                    href="https://github.com/emmanuelonyeka/lumiere-restaurant"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-project-source"
+                    aria-label="View Lumière source code on GitHub"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 10.94c.58.1.79-.25.79-.56v-2.17c-3.26.71-3.95-1.57-3.95-1.57-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.77 2.74 1.26 3.4.97.1-.75.41-1.26.74-1.55-2.6-.3-5.34-1.3-5.34-5.8 0-1.28.46-2.32 1.2-3.14-.12-.3-.52-1.5.12-3.12 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.5 3.2-1.2 3.2-1.2.64 1.62.24 2.82.12 3.12.74.82 1.2 1.86 1.2 3.14 0 4.52-2.75 5.5-5.37 5.8.42.36.8 1.08.8 2.17v3.22c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
                     </svg>
+                    Source Code
                   </a>
                 </div>
               </div>
-              <div class="p-card-preview">
-                <img src="images/lumiere.png" alt="Lumière Fine Dining preview" loading="lazy">
+
+              <div class="project-card-image">
+                <img
+                  src="images/lumiere.png"
+                  alt="Lumière Fine Dining website screenshot"
+                  loading="lazy"
+                />
               </div>
             </div>
           </article>
 
-          <!-- Project Card 3: NairaSave -->
-          <article class="p-card">
-            <!-- Decorative Folder Tab Header -->
-            <div class="p-card-tab-header tab-green">
-              <span class="p-tab-num">03</span>
-              <span class="p-tab-divider"></span>
-              <span class="p-tab-title">NairaSave</span>
-            </div>
-            <div class="p-card-body">
-              <div class="p-card-content">
-                <div class="p-card-meta">
-                  <span class="p-card-tag-badge">Team Project</span>
+
+          <!-- Project 03: NairaSave -->
+          <article class="project-card" aria-label="NairaSave fintech project">
+
+            <div class="project-card-inner">
+              <div class="project-card-content">
+                <div class="project-card-meta">
+                  <span class="project-card-num">03</span>
+                  <span class="project-card-category">Team Project</span>
                 </div>
-                <h3 class="p-card-name">NairaSave</h3>
-                <p class="p-card-desc">
-                  A fintech landing page built for the Nigerian Tech Talent Spotlight challenge — featuring a live USD/NGN exchange calculator, savings projection dashboard, and full Git/GitHub workflow.
+
+                <h3 class="project-card-title">NairaSave</h3>
+
+                <p class="project-card-desc">
+                  A fintech landing page built for the Nigerian Tech Talent Spotlight challenge — featuring
+                  a live USD/NGN exchange calculator, savings projection dashboard, and full Git/GitHub/Netlify workflow.
                 </p>
-                <div class="p-card-tech">
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">Vite</span>
-                  <span class="tech-tag">Tailwind</span>
-                  <span class="tech-tag">Framer Motion</span>
+
+                <div class="project-card-tags" aria-label="Technologies used">
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">Vite</span>
+                  <span class="project-tag">Tailwind</span>
+                  <span class="project-tag">Framer Motion</span>
                 </div>
-                <div class="p-card-actions">
-                  <a href="#" target="_blank" rel="noopener noreferrer" class="btn-project-action primary">
-                    View Project
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+
+                <div class="project-card-actions">
+                  <a
+                    href="#"
+                    class="btn-project-live"
+                    aria-label="View NairaSave live site"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                       <polyline points="15 3 21 3 21 9"/>
                       <line x1="10" y1="14" x2="21" y2="3"/>
                     </svg>
+                    View Project
                   </a>
-                  <a href="https://github.com/emmanuelonyeka/nairasave" target="_blank" rel="noopener noreferrer" class="btn-project-action secondary">
-                    Source Code
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  <a
+                    href="https://github.com/emmanuelonyeka/nairasave"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-project-source"
+                    aria-label="View NairaSave source code on GitHub"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 10.94c.58.1.79-.25.79-.56v-2.17c-3.26.71-3.95-1.57-3.95-1.57-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.77 2.74 1.26 3.4.97.1-.75.41-1.26.74-1.55-2.6-.3-5.34-1.3-5.34-5.8 0-1.28.46-2.32 1.2-3.14-.12-.3-.52-1.5.12-3.12 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.5 3.2-1.2 3.2-1.2.64 1.62.24 2.82.12 3.12.74.82 1.2 1.86 1.2 3.14 0 4.52-2.75 5.5-5.37 5.8.42.36.8 1.08.8 2.17v3.22c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
                     </svg>
+                    Source Code
                   </a>
                 </div>
               </div>
-              <div class="p-card-preview">
-                <img src="images/nairasave.png" alt="NairaSave preview" loading="lazy">
+
+              <div class="project-card-image">
+                <img
+                  src="images/nairasave.png"
+                  alt="NairaSave fintech landing page screenshot"
+                  loading="lazy"
+                />
               </div>
             </div>
           </article>
 
-          <!-- Project Card 4: Solara Jets -->
-          <article class="p-card">
-            <!-- Decorative Folder Tab Header -->
-            <div class="p-card-tab-header tab-orange">
-              <span class="p-tab-num">04</span>
-              <span class="p-tab-divider"></span>
-              <span class="p-tab-title">Solara Jets</span>
-            </div>
-            <div class="p-card-body">
-              <div class="p-card-content">
-                <div class="p-card-meta">
-                  <span class="p-card-tag-badge">Personal Project</span>
+
+          <!-- Project 04: Solara Jets -->
+          <article class="project-card" aria-label="Solara Jets aviation project">
+
+            <div class="project-card-inner">
+              <div class="project-card-content">
+                <div class="project-card-meta">
+                  <span class="project-card-num">04</span>
+                  <span class="project-card-category">Personal Project</span>
+                  <span class="project-card-category in-progress">
+                    <span class="progress-dot"></span>
+                    In Progress
+                  </span>
                 </div>
-                <h3 class="p-card-name">Solara Jets</h3>
-                <p class="p-card-desc">
-                  A premium luxury aviation booking platform with complex scroll layouts, GSAP timeline animations, and a refined dark design system built for high-net-worth clientele.
+
+                <h3 class="project-card-title">Solara Jets</h3>
+
+                <p class="project-card-desc">
+                  A premium luxury aviation booking platform with complex ScrollTrigger pinned-section scroll
+                  behavior, GSAP timeline animations, and a refined dark design system built for high-net-worth clientele.
                 </p>
-                <div class="p-card-tech">
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">TypeScript</span>
-                  <span class="tech-tag">Tailwind</span>
-                  <span class="tech-tag">GSAP</span>
+
+                <div class="project-card-tags" aria-label="Technologies used">
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">TypeScript</span>
+                  <span class="project-tag">Tailwind</span>
+                  <span class="project-tag">GSAP</span>
                 </div>
-                <div class="p-card-actions">
-                  <a href="#" target="_blank" rel="noopener noreferrer" class="btn-project-action primary">
-                    View Project
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+
+                <div class="project-card-actions">
+                  <a
+                    href="#"
+                    class="btn-project-live"
+                    aria-label="View Solara Jets live site"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                       <polyline points="15 3 21 3 21 9"/>
                       <line x1="10" y1="14" x2="21" y2="3"/>
                     </svg>
+                    View Project
                   </a>
-                  <a href="https://github.com/emmanuelonyeka/solara-jets" target="_blank" rel="noopener noreferrer" class="btn-project-action secondary">
-                    Source Code
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  <a
+                    href="https://github.com/emmanuelonyeka/solara-jets"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-project-source"
+                    aria-label="View Solara Jets source code on GitHub"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 10.94c.58.1.79-.25.79-.56v-2.17c-3.26.71-3.95-1.57-3.95-1.57-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.77 2.74 1.26 3.4.97.1-.75.41-1.26.74-1.55-2.6-.3-5.34-1.3-5.34-5.8 0-1.28.46-2.32 1.2-3.14-.12-.3-.52-1.5.12-3.12 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.5 3.2-1.2 3.2-1.2.64 1.62.24 2.82.12 3.12.74.82 1.2 1.86 1.2 3.14 0 4.52-2.75 5.5-5.37 5.8.42.36.8 1.08.8 2.17v3.22c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
                     </svg>
+                    Source Code
                   </a>
                 </div>
               </div>
-              <div class="p-card-preview">
-                <img src="images/solara.png" alt="Solara Jets preview" loading="lazy">
+
+              <div class="project-card-image">
+                <img
+                  src="images/solara.png"
+                  alt="Solara Jets luxury aviation website screenshot"
+                  loading="lazy"
+                />
               </div>
             </div>
           </article>
@@ -438,64 +585,73 @@
       </div>
     </section>
 
+
     <!-- =============================================
-       SERVICES SECTION
+         SERVICES SECTION
     ============================================= -->
-    <section class="section services-section" id="services">
+    <section id="services" class="section">
       <div class="container">
+
+        <!-- Section heading -->
         <div class="section-label-wrap">
           <span class="section-eyebrow">04. Services</span>
           <h2 class="section-title">What I offer</h2>
         </div>
 
         <div class="services-grid">
-          <!-- Service Card 1 -->
+
+          <!-- Service: Frontend Development -->
           <div class="service-card">
-            <div class="service-icon">
+            <div class="service-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
               </svg>
             </div>
             <h3 class="service-name">Frontend Development</h3>
             <p class="service-desc">Responsive, performant interfaces built with clean and scalable code.</p>
           </div>
 
-          <!-- Service Card 2 -->
+          <!-- Service: UI Implementation -->
           <div class="service-card">
-            <div class="service-icon">
+            <div class="service-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18M9 21V9"/>
               </svg>
             </div>
             <h3 class="service-name">UI Implementation</h3>
             <p class="service-desc">Pixel-accurate translation of Figma designs into production-ready code.</p>
           </div>
 
-          <!-- Service Card 3 -->
+          <!-- Service: Motion & Interaction -->
           <div class="service-card">
-            <div class="service-icon">
+            <div class="service-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
               </svg>
             </div>
-            <h3 class="service-name">Motion & Interaction</h3>
+            <h3 class="service-name">Motion &amp; Interaction</h3>
             <p class="service-desc">Scroll-driven animations and micro-interactions using GSAP and Framer Motion.</p>
           </div>
 
-          <!-- Service Card 4 -->
+          <!-- Service: Performance Optimization -->
           <div class="service-card">
-            <div class="service-icon">
+            <div class="service-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
               </svg>
             </div>
             <h3 class="service-name">Performance Optimization</h3>
             <p class="service-desc">Faster load times, better scores, cleaner architecture for long-term scale.</p>
           </div>
 
-          <!-- Service Card 5 -->
+          <!-- Service: Component Systems -->
           <div class="service-card">
-            <div class="service-icon">
+            <div class="service-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
               </svg>
@@ -504,9 +660,9 @@
             <p class="service-desc">Reusable, documented component libraries that scale with your product.</p>
           </div>
 
-          <!-- Service Card 6 -->
+          <!-- Service: Landing Pages -->
           <div class="service-card">
-            <div class="service-icon">
+            <div class="service-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
               </svg>
@@ -514,104 +670,100 @@
             <h3 class="service-name">Landing Pages</h3>
             <p class="service-desc">Conversion-focused pages designed to capture attention and drive action.</p>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- =============================================
-       BELIEFS SECTION
-    ============================================= -->
-    <section class="section beliefs-section" id="beliefs">
-      <div class="container beliefs-container">
-        <div class="beliefs-left">
-          <span class="section-eyebrow">05. Beliefs</span>
-          <h2 class="section-title">How I think</h2>
-          <p class="beliefs-sticky-desc">
-            Core principles that guide my engineering choices, communication, and visual craft.
-          </p>
-        </div>
 
-        <div class="beliefs-list-right">
-          <!-- Belief Item 1 -->
-          <div class="beliefs-list-item">
-            <div class="beliefs-list-num">01</div>
-            <div class="beliefs-list-body">
-              <h3 class="beliefs-list-title">Consistency over talent</h3>
-              <p class="beliefs-list-desc">Talent gets you noticed. Consistency gets the work done. I show up, meet deadlines, and deliver — every time.</p>
-            </div>
-          </div>
+    <!-- PROCESS SECTION -->
+<section id="process" class="section">
+  <div class="container">
 
-          <!-- Belief Item 2 -->
-          <div class="beliefs-list-item">
-            <div class="beliefs-list-num">02</div>
-            <div class="beliefs-list-body">
-              <h3 class="beliefs-list-title">Think before you type</h3>
-              <p class="beliefs-list-desc">The best code is code you don't have to rewrite. I plan structure, naming, and architecture before a single line is written.</p>
-            </div>
-          </div>
+    <div class="section-label-wrap">
+      <span class="section-eyebrow">07. Process</span>
+      <h2 class="section-title">How I work</h2>
+    </div>
 
-          <!-- Belief Item 3 -->
-          <div class="beliefs-list-item">
-            <div class="beliefs-list-num">03</div>
-            <div class="beliefs-list-body">
-              <h3 class="beliefs-list-title">Craft is in the details</h3>
-              <p class="beliefs-list-desc">The spacing, the transition timing, the hover state nobody asked for — those details are what separate good from great.</p>
-            </div>
-          </div>
+    <div class="process-list">
 
-          <!-- Belief Item 4 -->
-          <div class="beliefs-list-item">
-            <div class="beliefs-list-num">04</div>
-            <div class="beliefs-list-body">
-              <h3 class="beliefs-list-title">Honest scope, honest price</h3>
-              <p class="beliefs-list-desc">No inflated quotes, no hidden scope creep. You know exactly what you're getting and what it costs before we start.</p>
-            </div>
-          </div>
+      <div class="process-item">
+        <span class="process-num">01</span>
+        <div class="process-body">
+          <h3 class="process-title">Discovery & Planning</h3>
+          <p class="process-desc">We start with a conversation. I learn about your goals, audience, and timeline — then map out a clear plan before any code is written.</p>
         </div>
       </div>
-    </section>
+
+      <div class="process-item">
+        <span class="process-num">02</span>
+        <div class="process-body">
+          <h3 class="process-title">Design & Architecture</h3>
+          <p class="process-desc">I structure the layout, component hierarchy, and design system upfront — so the build phase is clean, predictable, and easy to iterate on.</p>
+        </div>
+      </div>
+
+      <div class="process-item">
+        <span class="process-num">03</span>
+        <div class="process-body">
+          <h3 class="process-title">Build & Refine</h3>
+          <p class="process-desc">I write clean, scalable code with regular check-ins. Every interaction, animation, and edge case is tested across devices as I go.</p>
+        </div>
+      </div>
+
+      <div class="process-item">
+        <span class="process-num">04</span>
+        <div class="process-body">
+          <h3 class="process-title">Deliver & Support</h3>
+          <p class="process-desc">You receive a fully tested, production-ready build. I stay available post-launch for questions, fixes, or anything that needs adjusting.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- =============================================
-       CONTACT SECTION
+         CONTACT SECTION
     ============================================= -->
-    <section class="section contact-section" id="contact">
+    <section id="contact" class="section">
       <div class="container">
+
+        <!-- Section headline -->
         <div class="contact-headline-wrap">
           <span class="section-eyebrow">06. Contact</span>
           <h2 class="contact-headline">
-            <span class="contact-title">Let's build something</span><br>
+            <span class="contact-headline-primary">Let's build something</span>
             <span class="contact-headline-accent">worth shipping.</span>
           </h2>
           <p class="contact-sub">
-            Have a project in mind? I'm currently available for freelance work. Reach out and let's talk about what you need.
+            Have a project in mind? I'm currently available for freelance work.
+            Reach out and let's talk about what you need.
           </p>
         </div>
 
-        <div class="contact-cta-wrapper">
-          <a href="https://wa.me/2348169269415" target="_blank" rel="noopener noreferrer" class="contact-wa-cta">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-              <path d="M12 2a10 10 0 0 0-8.66 15l-1.34 4.9 5.02-1.32A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.07-1.1l-.29-.17-2.98.78.8-2.9-.19-.3A8 8 0 1 1 12 20zm4.48-5.69c-.25-.12-1.47-.73-1.7-.82-.23-.08-.4-.12-.57.12-.17.25-.65.82-.8.99-.14.17-.29.19-.54.06-.25-.12-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.1-.5.1-.1.25-.27.37-.4.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.57-1.37-.78-1.88-.2-.48-.41-.41-.57-.42h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.12.17 1.77 2.7 4.29 3.78.6.26 1.07.42 1.43.54.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.29z"/>
-            </svg>
-            Message me on WhatsApp
-          </a>
-        </div>
+        <!-- WhatsApp CTA -->
+        <a
+          href="https://wa.me/2348169269415?text=Hi%20Emmanuel%2C%20I%20found%20your%20portfolio%20and%20would%20love%20to%20discuss%20a%20project."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-wa-btn"
+          aria-label="Message Emmanuel on WhatsApp"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+            <path d="M12 2a10 10 0 0 0-8.66 15l-1.34 4.9 5.02-1.32A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.07-1.1l-.29-.17-2.98.78.8-2.9-.19-.3A8 8 0 1 1 12 20zm4.48-5.69c-.25-.12-1.47-.73-1.7-.82-.23-.08-.4-.12-.57.12-.17.25-.65.82-.8.99-.14.17-.29.19-.54.06-.25-.12-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.1-.5.1-.1.25-.27.37-.4.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.57-1.37-.78-1.88-.2-.48-.41-.41-.57-.42h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.12.17 1.77 2.7 4.29 3.78.6.26 1.07.42 1.43.54.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.29z"/>
+          </svg>
+          Message me on WhatsApp
+        </a>
 
+        <!-- Contact link pills -->
         <div class="contact-links-grid">
-          <a href="https://wa.me/2348169269415" target="_blank" rel="noopener noreferrer" class="contact-link-pill">
-            <span class="contact-link-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                <path d="M12 2a10 10 0 0 0-8.66 15l-1.34 4.9 5.02-1.32A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.07-1.1l-.29-.17-2.98.78.8-2.9-.19-.3A8 8 0 1 1 12 20z"/>
-              </svg>
-            </span>
-            <span class="contact-link-body">
-              <span class="contact-link-label">WhatsApp</span>
-              <span class="contact-link-value">+234 816 926 9415</span>
-            </span>
-          </a>
 
-          <a href="mailto:emmanuel.onyekachi.dev@gmail.com" class="contact-link-pill">
+          <!-- Email -->
+          <a href="mailto:emmanuel.onyekachi.dev@gmail.com" class="contact-link-pill" aria-label="Email Emmanuel">
             <span class="contact-link-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                 <polyline points="22,6 12,13 2,6"/>
               </svg>
@@ -621,93 +773,181 @@
               <span class="contact-link-value">emmanuel.onyekachi.dev@gmail.com</span>
             </span>
           </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/emmanuelonyeka" target="_blank" rel="noopener noreferrer" class="contact-link-pill" aria-label="GitHub: emmanuelonyeka">
+            <span class="contact-link-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+                <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 10.94c.58.1.79-.25.79-.56v-2.17c-3.26.71-3.95-1.57-3.95-1.57-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.77 2.74 1.26 3.4.97.1-.75.41-1.26.74-1.55-2.6-.3-5.34-1.3-5.34-5.8 0-1.28.46-2.32 1.2-3.14-.12-.3-.52-1.5.12-3.12 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.5 3.2-1.2 3.2-1.2.64 1.62.24 2.82.12 3.12.74.82 1.2 1.86 1.2 3.14 0 4.52-2.75 5.5-5.37 5.8.42.36.8 1.08.8 2.17v3.22c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
+              </svg>
+            </span>
+            <span class="contact-link-body">
+              <span class="contact-link-label">GitHub</span>
+              <span class="contact-link-value">emmanuelonyeka</span>
+            </span>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/emmanuelymb/" target="_blank" rel="noopener noreferrer" class="contact-link-pill" aria-label="LinkedIn: emmanuelymb">
+            <span class="contact-link-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+                <path d="M4.98 3.5C4.98 5 3.87 6.1 2.5 6.1S0 5 0 3.5 1.1.9 2.5.9 4.98 2 4.98 3.5zM.4 8.1h4.2V24H.4zM8.4 8.1h4v2.2h.06c.56-1 1.94-2.2 4-2.2 4.28 0 5.07 2.82 5.07 6.5V24h-4.2v-7.7c0-1.84-.03-4.2-2.56-4.2-2.56 0-2.95 2-2.95 4.07V24H8.4z"/>
+              </svg>
+            </span>
+            <span class="contact-link-body">
+              <span class="contact-link-label">LinkedIn</span>
+              <span class="contact-link-value">emmanuelymb</span>
+            </span>
+          </a>
+
+          <!-- Twitter / X -->
+          <a href="https://x.com/emmmybills?s=21" target="_blank" rel="noopener noreferrer" class="contact-link-pill" aria-label="Twitter / X: @emmmybills">
+            <span class="contact-link-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+                <path d="M18.9 1H22l-7.6 8.7L23 23h-6.9l-5.4-7.1L4.7 23H1.6l8.1-9.3L1 1h7l5 6.6L18.9 1z"/>
+              </svg>
+            </span>
+            <span class="contact-link-body">
+              <span class="contact-link-label">Twitter / X</span>
+              <span class="contact-link-value">@emmmybills</span>
+            </span>
+          </a>
+
         </div>
 
-        <!-- Static Form Container -->
+        <!-- Contact form (dummy — no JS error logic) -->
         <div class="contact-form-container">
-          <form class="luxury-contact-form" action="#" method="POST" onsubmit="return false;">
-            <div class="form-group-row">
-              <div class="form-input-field">
-                <label for="name">Your Name <span>*</span></label>
-                <input type="text" id="name" name="name" placeholder="e.g. John Doe" required>
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/xyzkqypk"
+            method="POST"
+          >
+            <div class="form-row">
+              <div class="form-field">
+                <label for="contact-name">
+                  Your Name<span class="required-mark">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  placeholder="e.g. John Doe"
+                  required
+                />
               </div>
-              <div class="form-input-field">
-                <label for="email">Your Email <span>*</span></label>
-                <input type="email" id="email" name="email" placeholder="e.g. john@example.com" required>
+
+              <div class="form-field">
+                <label for="contact-email">
+                  Your Email<span class="required-mark">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  placeholder="e.g. john@example.com"
+                  required
+                />
               </div>
             </div>
 
-            <div class="form-input-field">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="How can I help you?">
+            <div class="form-field">
+              <label for="contact-subject">Subject</label>
+              <input
+                type="text"
+                id="contact-subject"
+                name="subject"
+                placeholder="How can I help you?"
+              />
             </div>
 
-            <div class="form-input-field">
-              <label for="message">Message <span>*</span></label>
-              <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+            <div class="form-field">
+              <label for="contact-message">
+                Message<span class="required-mark">*</span>
+              </label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="5"
+                placeholder="Tell me about your project..."
+                required
+              ></textarea>
             </div>
 
-            <button type="submit" class="luxury-submit-btn">Send Message</button>
+            <button type="submit" class="form-submit-btn">
+              Send Message
+            </button>
           </form>
         </div>
+
       </div>
     </section>
+
   </main>
 
+
   <!-- =============================================
-     FOOTER
+       FOOTER
   ============================================= -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="#" class="footer-logo">
-          <span class="curly">{</span>
-          <span class="e-logo">E</span>
-          <span class="curly">}</span>
-        </a>
-        <p class="footer-tagline">
-          Building fast, refined web experiences engineered with precision.
-        </p>
-        <div class="footer-status">
-          <span class="footer-status-dot"></span>
-          Available for new projects
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo" aria-label="Emmanuel Onyekachi — Home">
+            <span class="curly">{</span>
+            <span class="e-letter">E</span>
+            <span class="curly">}</span>
+          </a>
+          <p class="footer-tagline">
+            Building fast, refined web experiences<br />engineered with precision.
+          </p>
+          <div class="footer-status">
+            <span class="footer-status-dot" aria-hidden="true"></span>
+            Available for new projects
+          </div>
         </div>
+
+        <!-- Sections column -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Sections</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#work">Selected Work</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect column -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/emmanuelonyeka"        target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/emmanuelymb/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://x.com/emmmybills?s=21"            target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
+            <li><a href="https://wa.me/2348169269415"              target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a href="mailto:emmanuel.onyekachi.dev@gmail.com">Email</a></li>
+          </ul>
+        </div>
+
       </div>
 
-      <div class="footer-col">
-        <h4 class="footer-col-title">Sections</h4>
-        <ul class="footer-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#work">Selected Work</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#beliefs">Beliefs</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="footer-year"></span> Emmanuel Onyekachi. All rights reserved.
+        </p>
+        <p class="footer-built">Designed &amp; built by Emmanuel Onyekachi</p>
       </div>
 
-      <div class="footer-col">
-        <h4 class="footer-col-title">Connect</h4>
-        <ul class="footer-links">
-          <li><a href="https://github.com/emmanuelonyeka" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/emmanuelymb/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="https://x.com/emmmybills?s=21" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
-          <li><a href="https://wa.me/2348169269415" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p class="footer-copy">
-        &copy; 2026 Emmanuel Onyekachi. All rights reserved.
-      </p>
-      <p class="footer-built">
-        Designed & built by Emmanuel Onyekachi
-      </p>
     </div>
   </footer>
 
-  <!-- Vanilla JS Script containing ONLY menu toggle functionality -->
+  <!-- Script File -->
   <script src="script.js"></script>
 </body>
 </html>
