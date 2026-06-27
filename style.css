@@ -524,7 +524,7 @@ ul {
 
 @keyframes float-img {
     0%   { transform: translateY(0); }
-    50%  { transform: translateY(-14px); }
+    50%  { transform: translateY(-18px); }
     100% { transform: translateY(0); }
 }
 
