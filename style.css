@@ -1477,6 +1477,10 @@ ul {
     padding: 14px 20px;
     }
 
+    #hero {
+        padding-top: 60px;
+    }
+
     .services-grid {
     grid-template-columns: 1fr;
     }
